@@ -59,7 +59,6 @@ async function calculateTotal(channel) {
   let total = 0;
   for (const messageIterator of messages) {
     const message = messageIterator[1];
-    console.log("Verificando a mensagem: " + message.content);
     if (message.author.bot || !message.content)
       continue;
 
@@ -69,7 +68,6 @@ async function calculateTotal(channel) {
       if (isNaN(value))
         continue;
 
-      console.log(`Total: ${total}, Valor: ${value}`);
       total += value;
     }
 
